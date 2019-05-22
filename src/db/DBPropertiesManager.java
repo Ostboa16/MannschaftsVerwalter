@@ -28,8 +28,8 @@ public class DBPropertiesManager {
 
     public void createProperties(ConfigEnum config) throws Exception {
         load(
-//                File.separator + 
-                        CONFIGPATH + File.separator + config.getFilename());
+                //                File.separator + 
+                CONFIGPATH + File.separator + config.getFilename());
     }
 
     public void load(String filename) throws Exception {
@@ -38,9 +38,7 @@ public class DBPropertiesManager {
 
         try (
                 BufferedReader buffy = new BufferedReader(
-                        new FileReader(new File(filepath)));
-                )
-        {
+                        new FileReader(new File(filepath)));) {
 
             String line;
             while ((line = buffy.readLine()) != null) {
@@ -74,10 +72,10 @@ public class DBPropertiesManager {
         try {
             DBPropertiesManager dbpm = DBPropertiesManager.getInstance();
             dbpm.createProperties(ConfigEnum.DERBY);
-            System.out.println("Properties: "+dbpm.toString());
-            
+            System.out.println("Properties: " + dbpm.toString());
+
         } catch (Exception e) {
-            System.err.println(""+e.getMessage());
+            System.err.println("" + e.getMessage());
         }
     }
 
@@ -87,4 +85,3 @@ public class DBPropertiesManager {
     }
 
 }
-

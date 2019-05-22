@@ -18,14 +18,13 @@ public class RemovePlayerDlg extends javax.swing.JDialog {
     /**
      * Creates new form RemovePlayerDlg
      */
-    
     MannschaftsVerwalterModel model = new MannschaftsVerwalterModel();
-    
+
     public RemovePlayerDlg(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
-    
+
     public RemovePlayerDlg(MannschaftsVerwalterModel model) {
         this.model = model;
         initComponents();
@@ -86,10 +85,10 @@ public class RemovePlayerDlg extends javax.swing.JDialog {
             if (tfNumber.getText().equals("")) { //Überprüfen ob das Textfeld leer ist oder nicht
                 throw new Exception("Bitte eine gültige Zahl eingeben!");
             }
-            if(tfNumber.getText().equals("0")){ //Überprüfen ob das Textfeld 0 als Wert hat oder nicht
+            if (tfNumber.getText().equals("0")) { //Überprüfen ob das Textfeld 0 als Wert hat oder nicht
                 throw new Exception("Bitte eine Zahl größer die größer als 0 ist eingeben!");
             }
-            model.remove(Integer.parseInt(tfNumber.getText())-1); //Das Element auf der Stelle vom Textfeldinhalt - 1 entfernen (-1 weil es für den Benutzer einfacher ist ab 1 zu zählen
+            model.remove(Integer.parseInt(tfNumber.getText()) - 1); //Das Element auf der Stelle vom Textfeldinhalt - 1 entfernen (-1 weil es für den Benutzer einfacher ist ab 1 zu zählen
             this.setVisible(false); //Dialog schließen
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage(), "Fehler!", JOptionPane.ERROR_MESSAGE);

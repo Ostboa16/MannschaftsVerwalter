@@ -50,38 +50,38 @@ public class MannschaftsVerwalterModel extends AbstractTableModel {
 
     @Override
     public void setValueAt(Object o, int i, int i1) {
-        try{
-        if (o instanceof Spieler) {
-            liste.set(i, (Spieler) o);
-        } else {
-            Spieler sAlt = liste.get(i);
+        try {
+            if (o instanceof Spieler) {
+                liste.set(i, (Spieler) o);
+            } else {
+                Spieler sAlt = liste.get(i);
 
-            String nameAlt = sAlt.getName();
-            int rueckennummerAlt = sAlt.getRueckennummer();
-            String positionAlt = sAlt.getPosition();
+                String nameAlt = sAlt.getName();
+                int rueckennummerAlt = sAlt.getRueckennummer();
+                String positionAlt = sAlt.getPosition();
 
-            SpielerEnum enumIndex = SpielerEnum.values()[i1];
-            switch (enumIndex) {
-                case NAME:
-                    nameAlt = (String) o;
-                case RUECKENNUMMER:
-                    for (int j = 0; j < liste.size(); j++) {
-                        if (liste.get(j).getRueckennummer() != Integer.parseInt((String) o)) { //Überprüfen ob es die Rückennummer schon gibt
-                            rueckennummerAlt = Integer.parseInt((String) o);
-                        } else {
-                            throw new Exception("Es darf keine doppelten Rückennummern geben!");
+                SpielerEnum enumIndex = SpielerEnum.values()[i1];
+                switch (enumIndex) {
+                    case NAME:
+                        nameAlt = (String) o;
+                    case RUECKENNUMMER:
+                        for (int j = 0; j < liste.size(); j++) {
+                            if (liste.get(j).getRueckennummer() != Integer.parseInt((String) o)) { //Überprüfen ob es die Rückennummer schon gibt
+                                rueckennummerAlt = Integer.parseInt((String) o);
+                            } else {
+                                throw new Exception("Es darf keine doppelten Rückennummern geben!");
+                            }
                         }
-                    }
-                    break;
-                case POSITION:
-                    positionAlt = (String) o;
-                    break;
+                        break;
+                    case POSITION:
+                        positionAlt = (String) o;
+                        break;
+                }
+                Spieler sNew = new Spieler(nameAlt, rueckennummerAlt, positionAlt);
+                liste.set(i, sNew);
+                Collections.sort(liste, new CompSpieler());
             }
-            Spieler sNew = new Spieler(nameAlt, rueckennummerAlt, positionAlt);
-            liste.set(i, sNew);
-            Collections.sort(liste, new CompSpieler());
-        }
-        }catch(Exception e){
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage(), "Fehler!", JOptionPane.ERROR_MESSAGE);
         }
     }
@@ -115,7 +115,7 @@ public class MannschaftsVerwalterModel extends AbstractTableModel {
 
     public void remove(int index) throws Exception {
         //Rückennummer vom Index finden damit man es in der Datenbank löschen kann
-        int rn = (int) getValueAt(index,1);
+        int rn = (int) getValueAt(index, 1);
         adb.delete(rn);
         liste.remove(index);
         Collections.sort(liste, new CompSpieler()); //Sortieren

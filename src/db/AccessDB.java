@@ -29,25 +29,25 @@ public class AccessDB {
         int affectedRows = stmt.executeUpdate(" DELETE FROM Spieler ");
         System.out.println("Clear affected rows: " + affectedRows);
     }
-    
+
     public void delete(int r) throws Exception {
         Statement stmt = dbm.createStatement();
         int affectedRows = stmt.executeUpdate(" DELETE FROM Spieler WHERE rueckennummer = " + r);
         System.out.println("Clear affected rows: " + affectedRows);
     }
-    
+
     public void persistEntity(Spieler e) throws Exception {
         PreparedStatement pstmt = dbm.createPreparedStatement(
                 SpielerSQL.PSTMT_INSERT.getSql(),
                 Statement.RETURN_GENERATED_KEYS);
         //Spieler-Objekt als Datensatz setzen
-        pstmt.setString(1, e.getName()); 
+        pstmt.setString(1, e.getName());
         pstmt.setInt(2, e.getRueckennummer());
         pstmt.setString(3, e.getPosition());
 
         int affectedRows = pstmt.executeUpdate();
         System.out.println("persist-affectedRows: " + affectedRows);
 
-        pstmt.close(); 
+        pstmt.close();
     }
 }

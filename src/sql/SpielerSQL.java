@@ -1,13 +1,11 @@
-
 package sql;
 
-
 public enum SpielerSQL {
-   PSTMT_INSERT( " INSERT INTO Spieler ( " 
-        + " name, rueckennummer, position ) "
-        + " VALUES (?, ?, ? )" );
+    PSTMT_INSERT(" INSERT INTO Spieler ( "
+            + " name, rueckennummer, position ) "
+            + " VALUES (?, ?, ? )");
 
-   private String sql;
+    private String sql;
 
     private SpielerSQL(String sql) {
         this.sql = sql;
@@ -16,6 +14,5 @@ public enum SpielerSQL {
     public String getSql() {
         return sql;
     }
-   
-   
+
 }

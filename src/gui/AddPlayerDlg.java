@@ -113,16 +113,14 @@ public class AddPlayerDlg extends javax.swing.JDialog {
     private void onAdd(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onAdd
         try {
             if (tfName.getText().equals("")) { //Überprüfen ob das Textfeld leer ist oder nicht
-                throw new Exception("Bitte Namen für den Spieler eingeben!"); 
+                throw new Exception("Bitte Namen für den Spieler eingeben!");
             }
             if (chKap.isSelected() && kaptExists == false) { //Überprüfen ob es schon einen Kapitän gibt
                 model.add(new Spieler("[K] " + tfName.getText(), Integer.parseInt(spNumber.getValue().toString()), cbPosition.getSelectedItem().toString()));
                 kaptExists = true;
-            }
-            else if(kaptExists == true && chKap.isSelected()){ //Überprüfen ob es schon einen Kapitän gibt
+            } else if (kaptExists == true && chKap.isSelected()) { //Überprüfen ob es schon einen Kapitän gibt
                 throw new Exception("Es gibt bereits einen Kapitän!");
-            }
-            else{ //Wenn kein if erfüllt ist kommt es hier hin und erstellt den Spieler normal
+            } else { //Wenn kein if erfüllt ist kommt es hier hin und erstellt den Spieler normal
                 model.add(new Spieler(tfName.getText(), Integer.parseInt(spNumber.getValue().toString()), cbPosition.getSelectedItem().toString()));
             }
             //Alles Felder wieder zurücksetzen
