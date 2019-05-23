@@ -56,6 +56,7 @@ public class MannschaftsVerwalterGUI extends javax.swing.JFrame {
         jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Mannschafts Verwalter");
 
         jPanel2.setLayout(new java.awt.BorderLayout());
 

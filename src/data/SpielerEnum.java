@@ -2,7 +2,7 @@ package data;
 
 public enum SpielerEnum {
     NAME("Name"),
-    RUECKENNUMMER("Rueckennummer"),
+    RUECKENNUMMER("Rückennummer"),
     POSITION("Position");
 
     private String name;

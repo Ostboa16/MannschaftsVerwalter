@@ -3,17 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/model/MannschaftsVerwalterModel.java</file>
+            <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/gui/AddPlayerDlg.java</file>
+            <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/db/DBPropertiesManager.java</file>
+            <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/db/DBManager.java</file>
             <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/sql/spieler.sql</file>
             <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/gui/RemovePlayerDlg.java</file>
             <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/data/CompSpieler.java</file>
             <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/data/SpielerEnum.java</file>
             <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/sql/SpielerSQL.java</file>
-            <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/model/MannschaftsVerwalterModel.java</file>
-            <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/gui/AddPlayerDlg.java</file>
-            <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/db/DBPropertiesManager.java</file>
             <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/gui/MannschaftsVerwalterGUI.java</file>
             <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/data/Spieler.java</file>
-            <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/db/DBManager.java</file>
+            <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/dbconfig/ConfigEnum.java</file>
             <file>file:/C:/Users/Boris/Desktop/POS_Projekt/MannschaftsVerwalter/src/db/AccessDB.java</file>
         </group>
     </open-files>
